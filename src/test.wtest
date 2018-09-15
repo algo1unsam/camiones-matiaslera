@@ -1,0 +1,36 @@
+import empresa.*
+import transporte.*
+import cargas.*
+
+test "knightRider pesa 500" {
+	assert.equals(500, knightRider.peso())
+}
+
+test "Bumblebee se transforma en un robot y su nivel de peligrosidad es 30" {
+	bumblebee.transformar(robot)
+	assert.equals(30, bumblebee.nivelDePeligrosidad())
+}
+
+test "paqueteDeLadrillos su peso es 20kg con 10 ladrillos"
+{
+	paqueteDeLadrillos.cantidadLadrillo(10)
+	assert.equals(20, paqueteDeLadrillos.peso())
+}
+
+test "El camion tiene cargado paqueteDeLadrillos"{
+	camionMoyano.cargar(paqueteDeLadrillos)
+	assert.that(camionMoyano.tenesCargado(paqueteDeLadrillos))
+}
+test "El deposito recibe cosas"{
+	
+	transportistas.recibirCosas([paqueteDeLadrillos,bumblebee])
+	assert.equals(transportistas.tenesCargado(paqueteDeLadrillos))
+}
+
+test "Llenar el camion"{
+	
+	transportistas.recibirCosas([paqueteDeLadrillos,bumblebee])
+	transportistas.llenarElCamion(paqueteDeLadrillos)
+	assert.equals(camionMoyano.tenesCargado(paqueteDeLadrillos))
+}
+
