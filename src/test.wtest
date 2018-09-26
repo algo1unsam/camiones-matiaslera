@@ -2,6 +2,8 @@ import empresa.*
 import transporte.*
 import cargas.*
 
+// TODO bien los tests
+
 test "knightRider pesa 500" {
 	assert.equals(500, knightRider.peso())
 }

@@ -10,6 +10,9 @@ object knightRider {
 
 object bumblebee {
 
+	// TODO como haces para usar esto? el warning te lo está marcando
+	// o le pones property (lo que sólo habilitaría el getter)
+	// o le haces el getter a mano
 	const peso = 800
 	var transformacion = auto
 
@@ -37,6 +40,7 @@ object robot {
 
 object paqueteDeLadrillos {
 
+	// TODO idem bumblebee
 	const nivelDePeligrosidad = 2
 	var property pesoLadrillo = 2
 	var property cantidadLadrillo = 1
@@ -64,6 +68,9 @@ object contenedorPortuario {
 
 }
 object embalajeDeSeguridad{
+	// TODO acá NO es una lista sino que el embalaje embala una sola cosa
+	// el enunciado dice:
+	// Es una cobertura que envuelve a cualquier otra *cosa*. El peso es el peso de *la cosa* que tenga adentro.
 	var productoEnvuelto= []
 	
 	method nivelDePeligrosidad(){

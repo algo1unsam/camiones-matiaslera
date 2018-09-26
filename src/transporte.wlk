@@ -47,10 +47,12 @@ object motoneta {
 
 	var cargas = []
 	var property cargaMaxima = 1000
+	// TODO la ruta por qué esta acá como un atributo de motoneta?
 	var ruta = panamericana
 
 	method cargar(algo) {
 		if (self.puedeAceptar(algo)) cargas.add(algo)
+		// TODO falta lo de sacarlos del deposito
 	}
 
 	method puedeAceptar(algo) {
